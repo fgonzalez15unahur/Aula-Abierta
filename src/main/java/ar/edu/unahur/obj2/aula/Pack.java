@@ -39,9 +39,7 @@ public class Pack implements Oferta {
        return  total - (total * descuento/100);
     }
 
-    public void AgregarCurso(Curso curso) {
-        cursos.add(curso);
-    }
+
     @Override
     public Integer getHoras() {
             return this.cursos.stream().mapToInt(Oferta::getHoras).sum() ;

@@ -3,6 +3,7 @@ package ar.edu.unahur.obj2.aula;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 public class Etapa1 {
     
     @Test 
@@ -46,8 +47,21 @@ public class Etapa1 {
     @Test 
     void DadoUnaOferta_AlConsultarSiIncluyeCursoPorNombre_ObtenerSiIncluye()
     {
+            Oferta oferta = new Curso("Ingles", 23, 343);
+            assertTrue(oferta.ContieneCurso("Ingles")); 
         
-        
+    }
+    @Test 
+    void dadoUnPrograma_CalcularPrecio_ObtenerResultado()
+    {
+        Pack pack = new Pack("Ingles",10);
+        pack.Agregar(new Curso("Inglés Básico",90.0,40));
+        pack.Agregar(new Curso("Inglés Intermedio",110.0,40));
+        pack.Agregar(new Curso("Conversación",60.000,20));
+
+        assertEquals( 234.000, pack.getPrecio());
+
+
     }
 
 
