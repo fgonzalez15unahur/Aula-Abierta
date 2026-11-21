@@ -7,7 +7,7 @@ public class BecaInstitucional extends Adicionales{
     }
     @Override  
     public Double getPrecio(){
-        return super.getPrecio() - super.getPrecio() * 0.2;
+        return super.getPrecio() * 0.8;
     }
     @Override 
     public String getDescripcion()
